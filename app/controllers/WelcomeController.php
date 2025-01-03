@@ -25,6 +25,9 @@ class WelcomeController {
         $argent= $Model->getArgent($_SESSION['id_client']);
         Flight::render('page', ['view' => 'deposit','connected'=>$connected,'argent'=>$argent]);
     }
+    public function gift() {
+        Flight::render('page', ['view' => 'gift']);
+    }
     public function deco()
     {
         session_destroy();
