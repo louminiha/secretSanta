@@ -349,7 +349,7 @@ section {
     gap: 24px;
     padding:30px;
     box-shadow: 0 20px 28px rgba(0, 0, 0, 0.15);
-    border-radius:30px
+    border-radius:30px;
 }
 
 #girls {
@@ -376,6 +376,11 @@ section {
 .box:hover {
     transform:scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.img-box {
+    width: 100%;
+    height: 70%;
 }
 
 .box img {
@@ -486,5 +491,21 @@ section {
     gap: 20px;
 }
 
+#alert {
+    background-color: rgb(0,0,0,0.2);
+}
 
+.message-box {
+    text-align: left;
+    width: 30%;
+    color: #919191;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.message-box h2 {
+    color: #585858;
+}
 

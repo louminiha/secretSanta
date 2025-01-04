@@ -31,6 +31,9 @@ class WelcomeController {
     public function result() {
         Flight::render('page', ['view' => 'result']);
     }
+    public function alert() {
+        Flight::render('page', ['view' => 'alert']);
+    }
     public function deco()
     {
         session_destroy();
