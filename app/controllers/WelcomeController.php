@@ -34,6 +34,12 @@ class WelcomeController {
     public function alert() {
         Flight::render('page', ['view' => 'alert']);
     }
+    public function admin() {
+        Flight::render('admin', ['view' => 'admin-home']);
+    }
+    public function depositsValidation() {
+        Flight::render('admin', ['view' => 'deposits-validation']);
+    }
     public function deco()
     {
         session_destroy();
