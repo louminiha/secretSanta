@@ -8,14 +8,14 @@
                     <input type="hidden" id="somme" name="somme">
                     <input type="hidden" name="argent" value=<?php echo $argent ?>>
 
-                    <p>Somme argent :<span><?php echo $argent ?></span> Ar</p>
+                    <p>Votre argent :<span><?php echo $argent ?></span> Ar</p>
                 </div>
-                <button class="button" type="submit"><i class="fa-solid fa-check"></i> Validate</button>
+                <button class="button" type="submit"><i class="fa-solid fa-check"></i> Acheter</button>
         </h3>
         </form>
         <form action="reload" method="get">
-            <button class="button"><i class="fa-solid fa-question-circle"></i> Reload all</button>
-            <button class="button"><i class="fa-solid fa-circle"></i> Reload selected gifts</button>
+            <!-- <button class="button"><i class="fa-solid fa-question-circle"></i> Reload all</button> -->
+            <button class="button"><i class="fa-solid fa-question-circle"></i> Reload selected gifts</button>
 
 
             <div id="boxes">

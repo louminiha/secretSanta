@@ -21,6 +21,7 @@ use flight\net\Router;
 $Welcome_Controller = new WelcomeController();
 $client_controller= new ClientController();
 $cadeau_controller= new CadeauxController();
+$admin_controller= new AdminController();
 //$router->get('/', [ $Welcome_Controller, 'home' ]); 
 $Welcome_Controller = new WelcomeController();
 $router->get('/', [ $Welcome_Controller, 'home' ]); 
@@ -29,7 +30,7 @@ $router->get('/deposit', [ $Welcome_Controller, 'deposit' ]);
 $router->get('/result', [ $Welcome_Controller, 'result' ]); 
 $router->get('/alert', [ $Welcome_Controller, 'alert' ]); 
 $router->get('/admin', [ $Welcome_Controller, 'admin' ]); 
-$router->get('/deposits-validation', [ $Welcome_Controller, 'depositsValidation' ]); 
+// $router->get('/deposits-validation', [ $Welcome_Controller, 'depositsValidation' ]); 
 $router->get('/faire_depot', [  $client_controller, 'insererDepot' ]); 
 
 //$router->get('/', [ $client_controller, 'loginPage']); 
@@ -41,7 +42,8 @@ $router->get('/generer', [ $cadeau_controller, 'getCadeaux']);
 $router->post('/achat', [ $cadeau_controller, 'achat_cadeaux']); 
 $router->get('/reload',[$cadeau_controller,'ChangerProduitsSelectionne']);
 
-
+$router->get('/deposits-validation',[$admin_controller,'afficher_depot']);
+$router->get('/validation_depot/@id_depot',[$admin_controller,'valider_depot']);
 
 
 // $router->get('/homedb', [ $Welcome_Controller, 'homedb' ]); 

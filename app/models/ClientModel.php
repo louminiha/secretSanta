@@ -56,7 +56,7 @@ class ClientModel
     }
     function faire_achat($id_client,$somme)
     {
-        $sql= "update compte_client set somme_argent= somme_argent+12 where id_client=".$id_client."";
+        $sql= "update compte_client set somme_argent= somme_argent+".$somme." where id_client=".$id_client."";
         $stmt=$this->db->prepare($sql);
         $stmt->execute();
     }

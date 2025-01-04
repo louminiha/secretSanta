@@ -61,7 +61,7 @@ class CadeauxController
             $Model->faire_achat($_SESSION['id_client'], $somme);
             $connect = true;
             $data = ["view" => "gift", 'connected' => $connect];
-            //Flight::render('page', $data);
+            Flight::render('page', $data);
         } else {
             $_SESSION['message'] = "montant insuffisant";
             $connect = true;
@@ -81,6 +81,19 @@ class CadeauxController
                 $data = ['cadeaux' => $_SESSION['cadeau'], 'argent' => $argent, 'view' => "result", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
                 Flight::render('page', $data);
             }
+        }
+    }
+    public function ChangerTousLesProduits()
+    {
+        $cadeauM = new CadeauxModel(Flight::db());
+        $Model = new ClientModel(Flight::db());
+        $argent = $Model->getArgent($_SESSION['id_client']);
+        for ($i = 0; $i < count($_SESSION['cadeau']); $i++) {
+          
+                $_SESSION['cadeau'][$i] = $cadeauM->refaireChoix($_SESSION['cadeau'][$i]['id_category']);
+                $connect = true;
+                $data = ['cadeaux' => $_SESSION['cadeau'], 'argent' => $argent, 'view' => "result", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
+                Flight::render('page', $data);
         }
     }
 }

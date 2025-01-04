@@ -1,5 +1,6 @@
 CREATE table Compte_Client(
     id_client INT AUTO_INCREMENT PRIMARY KEY,
+    somme_argent decimal(10,2),
     nom VARCHAR(20)
 );
 create table depot(

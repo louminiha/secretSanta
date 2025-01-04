@@ -16,8 +16,8 @@
             <p>General</p>
             <nav>
                 <ul>
-                    <li><a href="/admin"><i class="fas fa-house"></i>Home</a></li>
-                    <li><a href="/deposits-validation"><i class="fas fa-chart-line"></i>Deposit</a></li>
+                    <li><a href="admin"><i class="fas fa-house"></i>Home</a></li>
+                    <li><a href="deposits-validation"><i class="fas fa-chart-line"></i>Deposit</a></li>
                     <li><a href="#"><i class="fas fa-user-friends"></i>Users</a></li>
                     <li><a href="#"><i class="fas fa-gift"></i>Gifts</a></li>
                     </ul>

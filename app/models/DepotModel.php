@@ -10,8 +10,8 @@ class DepotModel
         $this->db = $db;
     }
 //fonction get depot non-valide
-    public function getDepot($id_client){
-        $sql = "SELECT id_client,Montant_depot FROM depot where id_client=".$id_client." and validation=FALSE";
+    public function getDepot(){
+        $sql = "SELECT id_depot,c.id_client,montant_depot,nom FROM depot d join compte_client c on d.id_client=c.id_client where validation=FALSE";
         $stmt = $this->db->query($sql);
         return $stmt->fetchAll();
     }
