@@ -1,6 +1,10 @@
 CREATE table Compte_Client(
     id_client INT AUTO_INCREMENT PRIMARY KEY,
+<<<<<<< HEAD
     somme_argent decimal(10,2),
+=======
+    somme_argent decimal(10,2), --somme total des achats du client
+>>>>>>> 61dc8cc89c59d5b814227186131c960a5373b94b
     nom VARCHAR(20)
 );
 create table depot(
@@ -22,11 +26,11 @@ CREATE TABLE produits (
 );
 -- Insérer des clients dans la table Compte_Client
 INSERT INTO Compte_Client (nom) VALUES
-('Alice'),
-('Bob'),
-('Charlie'),
-('Diana'),
-('Edward');
+('Alice',0),
+('Bob',3),
+('Charlie',78),
+('Diana'.0),
+('Edward'.56);
 
 -- Insérer des dépôts dans la table depot
 INSERT INTO depot (id_client, Montant_depot, validation) VALUES
