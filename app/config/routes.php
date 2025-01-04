@@ -27,6 +27,9 @@ $router->get('/', [ $Welcome_Controller, 'home' ]);
 $router->get('/home', [ $Welcome_Controller, 'acceuil' ]); 
 $router->get('/deposit', [ $Welcome_Controller, 'deposit' ]); 
 $router->get('/result', [ $Welcome_Controller, 'result' ]); 
+$router->get('/alert', [ $Welcome_Controller, 'alert' ]); 
+$router->get('/admin', [ $Welcome_Controller, 'admin' ]); 
+$router->get('/deposits-validation', [ $Welcome_Controller, 'depositsValidation' ]); 
 $router->get('/faire_depot', [  $client_controller, 'insererDepot' ]); 
 
 //$router->get('/', [ $client_controller, 'loginPage']); 
