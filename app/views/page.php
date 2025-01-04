@@ -53,7 +53,7 @@
                 if($connected) { ?>
                 <a href="deposit" class="depot"><button class="button"><i class="fa-solid fa-coins"></i> Make a deposit</button></a>
                 <a href="" class="admin"><button class="button"><i class="fa-solid fa-gifts"></i> Get gift</button></a>
-                <a href=""><i class="fa-solid fa-user"></i> Profile</a>
+                <a href=""><i class="fa-solid fa-user"></i>ADMIN</a>
 
             <?php } else { ?>
                 <a id="loginLink" style="cursor: pointer;" class="navlink"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
