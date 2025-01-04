@@ -1,7 +1,7 @@
 <section id="gift">
     <div class="form">
         <h2>How many are you? </h2>
-        <form action="">
+        <form action="/result">
             <label for="girls">Girls</label>
             <br>
             <input id="girls" type="number">
