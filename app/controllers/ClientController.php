@@ -31,7 +31,7 @@ class ClientController {
         $_SESSION['id_client']=$loginModel->setIdSession($mail,$password);
         $_SESSION['mail']=$mail;
         $connect=true;
-        $data=["view"=>"home",'connected'=>$connect];
+        $data=["view"=>"gift",'connected'=>$connect];
         Flight::render('page',$data);
     //    }else if(isset($_SESSION['erreur']))
     //    {
@@ -61,7 +61,7 @@ class ClientController {
         $_SESSION['mail']=$mail;
         $_SESSION['id_client']=$loginModel->setIdSession($mail,$password);
         $connect=true;
-        $data=["view"=>"home",'connected'=>$connect];
+        $data=["view"=>"gift",'connected'=>$connect];
         Flight::render('page',$data);
       
     }
@@ -73,7 +73,9 @@ class ClientController {
         $idCLient=  $_SESSION['id_client'];
         $depotM->InsertDepot($idCLient,$montant);
         $connect=true;
-        $data=["view"=>"deposit",'connected'=>$connect];
+        $Model = new ClientModel(Flight::db());
+        $argent= $Model->getArgent($_SESSION['id_client']);
+        $data=["view"=>"deposit",'connected'=>$connect,'argent'=>$argent];
        Flight::render('page',$data);
     }
     public function returnSommeArgent()
@@ -81,8 +83,6 @@ class ClientController {
         $Model = new ClientModel(Flight::db());
         $argent= $Model->getArgent($_SESSION['id_client']);
        Flight::render('page',['view'=>'deposit','argent'=>$argent]);
-
-
     }
     
     

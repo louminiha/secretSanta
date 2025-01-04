@@ -27,9 +27,9 @@
     </div>
     <div class="form">
         <h2>Make a deposit </h2>
-        <form action="">
+        <form action="faire_depot">
             <label for="amount">Enter a number</label>
-            <input id="amount" type="number">
+            <input id="amount" type="number" name="montant_depot">
             <button type="submit">Submit</button>
         </form>
     </div>
