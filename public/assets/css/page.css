@@ -371,6 +371,7 @@ section {
     position: relative;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     max-height: 400px;
+    
 }
 
 .box:hover {
@@ -436,6 +437,7 @@ section {
     justify-content:space-between;
     align-items: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .radio-label {

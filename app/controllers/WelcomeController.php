@@ -29,7 +29,9 @@ class WelcomeController {
         Flight::render('page', ['view' => 'gift']);
     }
     public function result() {
-        Flight::render('page', ['view' => 'result']);
+        $connected=true;
+        $Model = new ClientModel(Flight::db());
+        Flight::render('page', ['view' => 'result','connected'=>$connected]);
     }
     public function deco()
     {

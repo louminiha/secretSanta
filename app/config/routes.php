@@ -36,6 +36,7 @@ $router->post('/connexion', [ $client_controller, 'verificationConnexionClient' 
 $router->post('/inserer_client', [ $client_controller, 'InsererClient' ]); 
 $router->get('/generer', [ $cadeau_controller, 'getCadeaux']); 
 $router->post('/achat', [ $cadeau_controller, 'achat_cadeaux']); 
+$router->get('/reload',[$cadeau_controller,'ChangerProduitsSelectionne']);
 
 
 
