@@ -26,6 +26,7 @@ $Welcome_Controller = new WelcomeController();
 $router->get('/', [ $Welcome_Controller, 'home' ]); 
 $router->get('/home', [ $Welcome_Controller, 'acceuil' ]); 
 $router->get('/deposit', [ $Welcome_Controller, 'deposit' ]); 
+$router->get('/result', [ $Welcome_Controller, 'result' ]); 
 $router->get('/faire_depot', [  $client_controller, 'insererDepot' ]); 
 
 //$router->get('/', [ $client_controller, 'loginPage']); 

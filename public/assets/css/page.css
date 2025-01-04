@@ -312,7 +312,7 @@ section {
 }
 
 #deposit .form button:hover, #gift .form button:hover {
-    background-color: rgb(48, 47, 47);
+    background-color: rgb(34, 34, 34);
     color: rgb(255, 255, 255);
 }
 
@@ -321,6 +321,167 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
+}
+
+#result {
+    margin-top:20px;
+    padding-top:0;
+}
+
+.result-table {
+    padding: 32px;
+    position: relative;
+    z-index: 10; 
+}
+
+.result-table h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0,0,0,0.5);
+    margin-bottom: 24px;
+    text-align:left;
+}
+
+
+.card-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    padding:30px;
+    box-shadow: 0 20px 28px rgba(0, 0, 0, 0.15);
+    border-radius:30px
+}
+
+#girls {
+    background-color:#D999FF;
+}
+
+#boys {
+    background-color:rgb(96, 133, 255);
+}
+
+.box {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;}
+
+.box:hover {
+    transform:scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.box p {
+    margin-bottom: 4px;
+}
+
+.box #gift-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+.box #gift-price {
+    color: #666;
+}
+
+.box button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Optional: Number badge */
+.box::before {
+    content: attr(data-number); /* Use data attribute for number */
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.box{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+}
+
+.radio-label {
+    display: inline-flex; /* or flex if you want more control */
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 8px; /* Add some space above the radio button */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-label:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.radio-label input[type="checkbox"] {
+    appearance: none; /* Remove default radio button styling */
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.radio-label input[type="checkbox"]:checked {
+    border-color: #007bff; /* Highlight checked radio */
+    position: relative; /* Needed for the inner circle */
+}
+
+.radio-label input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+#boxes {
+    display: flex;
+    gap: 20px;
 }
 
 

@@ -28,6 +28,9 @@ class WelcomeController {
     public function gift() {
         Flight::render('page', ['view' => 'gift']);
     }
+    public function result() {
+        Flight::render('page', ['view' => 'result']);
+    }
     public function deco()
     {
         session_destroy();
