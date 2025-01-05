@@ -26,7 +26,8 @@ class WelcomeController {
         Flight::render('page', ['view' => 'deposit','connected'=>$connected,'argent'=>$argent]);
     }
     public function gift() {
-        Flight::render('page', ['view' => 'gift']);
+        $connected=true;
+        Flight::render('page', ['view' => 'gift','connected'=>$connected]);
     }
     public function result() {
         $connected=true;

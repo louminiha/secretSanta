@@ -52,7 +52,7 @@
             <?php 
                 if($connected) { ?>
                 <a href="deposit" class="depot"><button class="button"><i class="fa-solid fa-coins"></i> Make a deposit</button></a>
-                <a href="" class="admin"><button class="button"><i class="fa-solid fa-gifts"></i> Get gift</button></a>
+                <a href="gift" class="admin"><button class="button"><i class="fa-solid fa-gifts"></i> Get gift</button></a>
                 <a href="admin"><i class="fa-solid fa-user"></i>ADMIN</a>
 
             <?php } else { ?>

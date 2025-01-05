@@ -1,11 +1,8 @@
 CREATE table Compte_Client(
     id_client INT AUTO_INCREMENT PRIMARY KEY,
-<<<<<<< HEAD
-    somme_argent decimal(10,2),
-=======
-    somme_argent decimal(10,2), --somme total des achats du client
->>>>>>> 61dc8cc89c59d5b814227186131c960a5373b94b
-    nom VARCHAR(20)
+    nom VARCHAR(20),
+    password VARCHAR(50),
+    somme_argent decimal(10,2) --somme total des achats du client
 );
 create table depot(
     id_depot INT AUTO_INCREMENT PRIMARY KEY,

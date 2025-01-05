@@ -23,6 +23,7 @@ class CadeauxController
         $cadeauM = new CadeauxModel(Flight::db());
         $Model = new ClientModel(Flight::db());
         $argent = $Model->getArgent($_SESSION['id_client']);
+        if(!$argent) $argent=0;
         //  echo empty($argent['somme']);
         // if(empty($argent['somme'])) $argent['somme']=0;
         //  $argent=$argent['somme'];
@@ -65,7 +66,7 @@ class CadeauxController
         } else {
             $_SESSION['message'] = "montant insuffisant";
             $connect = true;
-            $data = ['cadeaux' => $_SESSION['cadeau'], 'argent' => $argent, 'view' => "result", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
+            $data = ['cadeaux' => $_SESSION['cadeau'],'total'=>$somme, 'argent' => $argent, 'view' => "alert", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
             Flight::render('page', $data);
         }
     }
@@ -74,6 +75,7 @@ class CadeauxController
         $cadeauM = new CadeauxModel(Flight::db());
         $Model = new ClientModel(Flight::db());
         $argent = $Model->getArgent($_SESSION['id_client']);
+        if(!$argent) $argent=0;
         for ($i = 0; $i < count($_SESSION['cadeau']); $i++) {
             if (isset($_GET['choix' . $i . ''])) {
                 $_SESSION['cadeau'][$i] = $cadeauM->refaireChoix($_SESSION['cadeau'][$i]['id_category']);
@@ -88,6 +90,7 @@ class CadeauxController
         $cadeauM = new CadeauxModel(Flight::db());
         $Model = new ClientModel(Flight::db());
         $argent = $Model->getArgent($_SESSION['id_client']);
+        if(!$argent) $argent=0;
         for ($i = 0; $i < count($_SESSION['cadeau']); $i++) {
           
                 $_SESSION['cadeau'][$i] = $cadeauM->refaireChoix($_SESSION['cadeau'][$i]['id_category']);
@@ -95,5 +98,14 @@ class CadeauxController
                 $data = ['cadeaux' => $_SESSION['cadeau'], 'argent' => $argent, 'view' => "result", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
                 Flight::render('page', $data);
         }
+    }
+    public function Affichage_cadeau()
+    {
+        $connect = true;
+        $Model = new ClientModel(Flight::db());
+        $argent = $Model->getArgent($_SESSION['id_client']);
+        if(!$argent) $argent=0;
+        $data = ['cadeaux' => $_SESSION['cadeau'], 'argent' => $argent, 'view' => "result", 'connected' => $connect,'nbfille'=>$_SESSION['nb_fille'],'nbgarcon'=>$_SESSION['nb_garcon']];
+        Flight::render('page', $data);
     }
 }
